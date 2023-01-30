@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Censorship</title>
+		<link rel="stylesheet" href="./base.css" />
+	</head>
+
+	<body>
+		<div class="controls">
+			<label for="SCALE">
+				SCALE:
+				<input type="range" name="SCALE" min="1.5" max="3" step="0.1" />
+			</label>
+			<label for="SIZE">
+				SIZE:
+				<input
+					type="range"
+					name="SIZE"
+					min="10"
+					max="100"
+					step="10"
+					value="10"
+				/>
+			</label>
+		</div>
+		<div class="wrap">
+			<video class="webcam"></video>
+			<canvas class="video"></canvas>
+			<canvas class="face"></canvas>
+		</div>
+
+		<script src="./pixelated-face.js"></script>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				height: 100vh;
+				overflow: hidden;
+			}
+
+			.wrap {
+				position: relative;
+				max-height: 100vh;
+				display: grid;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.wrap > * {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			.face {
+				position: absolute;
+			}
+
+			.controls label {
+				display: inline-flex;
+			}
+			.controls input {
+				margin-left: 10px;
+			}
+			.controls {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				font-weight: bold;
+				margin: 20px 0;
+			}
+		</style>
+	</body>
+</html>
