@@ -6,4 +6,4 @@ for install all dependencies
 To run with npm
 ```npm start```
 # preview link
-https://nerdgeek007.github.io/face-detection/
+https://face-detection-rosy.vercel.app/
