@@ -4,6 +4,9 @@
 
 const video = document.querySelector('.webcam');
 
+let hello = null;
+console.log(hello);
+
 const canvas = document.querySelector('.video');
 const ctx = canvas.getContext('2d');
 
